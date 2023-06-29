@@ -26,7 +26,7 @@ export default function Film() {
     <div>
 
       <Box sx={{ flexGrow: 1 }} >
-        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 17 }} className="container" >
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 15 }} className="container" >
           {data.map((film) => (
             <Grid item xs={2} sm={4} md={4} key={film.id}  >
               <Item  >
@@ -34,9 +34,8 @@ export default function Film() {
                   <img src={film.image} alt="" />
                   <h3>{film.title}</h3>
                   <p className="title">{film.nation}</p>
-                  <p>{film.year}</p>
                   <Link to={`detail/${film.id}`}>
-                    <p><button className="column-button" ><Icon >< AdsClickIcon /></Icon> </button></p>
+                    <p><button className="column-button" >Detail </button></p>
                   </Link>
                 </div>
               </Item>

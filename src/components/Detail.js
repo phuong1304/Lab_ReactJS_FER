@@ -9,29 +9,33 @@ export default function Detail() {
   const film = data.find(obj => {
     return obj.id == userName.id;
   });
-  let view = film.view.toLocaleString();
+  let view = film.like.toLocaleString();
   return (
     <div className='container-detail'>
       <div className='product-card'>
-        <div className='badge'>{film.title}</div>
+
         <div className='product-tumb'>
           <img src={`../${film.image}`} alt='' />
         </div>
+
         <div className='product-details'>
           <h4 className='product-title'>{film.title}</h4>
           <div>{film.nation}</div>
-          <div className='product-price'>View: {view} people</div>
-          <div className='product-info'>{film.information}</div>
-          <div className="video">
-            <ReactPlayer
-              width="700px"
-              height="400px"
-              url={film.trailer}
-              controls
-            />
-          </div>
+          <div className='product-price'>likes: {film.like} likes</div>
+          <div className='product-info'>{film.info}</div>
+
 
         </div>
+
+      </div>
+      <div className="video">
+        <ReactPlayer
+          width="700px"
+          height="400px"
+          url={film.video}
+          controls
+
+        />
       </div>
     </div>
   )
