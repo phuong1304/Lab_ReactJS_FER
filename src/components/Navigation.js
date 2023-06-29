@@ -1,34 +1,57 @@
-import React from "react"
-
-// import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
+import React from "react";
 import Icon from '@mui/material/Icon';
-import HomeSharpIcon from '@mui/icons-material/HomeSharp';
-import InfoSharpIcon from '@mui/icons-material/InfoSharp';
-import NewspaperSharpIcon from '@mui/icons-material/NewspaperSharp';
-import ContactPhoneSharpIcon from '@mui/icons-material/ContactPhoneSharp';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import ArticleIcon from '@mui/icons-material/Article';
+import PhoneIcon from '@mui/icons-material/Phone';
 import { Link } from "react-router-dom";
-;
-//style={{ backgroundColor: theme.backgroundColor, color: theme.color }}  style={{ color: theme.color }}
 
 export default function Navigation() {
     return (
-
         <div className="header">
-
-            <nav >
+            <nav>
                 <a class="logo">
-                    <img src="assets/logo/logo.png" class="logo-img" alt="" />
-                    <p>PHIM PHE PHA</p>
+                    <p>ME PHIM</p>
                 </a>
-                <ul >
-                    <li><Link to="/" ><Icon className="menu-icon"><HomeSharpIcon /></Icon>Home</Link></li>
-                    <li to="/about"><Link to="/about"><Icon className="menu-icon"><InfoSharpIcon /></Icon>About</Link></li>
-                    <li to="/news"><Link to="/news"><Icon className="menu-icon"><NewspaperSharpIcon />drv</Icon>News</Link></li>
-                    <li to="/contact" ><Link to="/contact"><Icon className="menu-icon"><ContactPhoneSharpIcon />contacts</Icon>Contact</Link></li>
+                <ul>
+                    <li>
+                        <Link to="/">
+                            <Icon className="menu-icon">
+                                <HomeIcon />
+                            </Icon>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">
+                            <Icon className="menu-icon">
+                                <InfoIcon />
+                            </Icon>
+                            Contact
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/blog">
+                            <Icon className="menu-icon">
+                                <ArticleIcon />
+                            </Icon>
+                            Blogs
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about">
+                            <Icon className="menu-icon">
+                                <PhoneIcon />
+                            </Icon>
+                            About Us
+                        </Link>
+                    </li>
                 </ul>
-
             </nav>
-        </div >
+        </div>
+    );
+}
+
 
         // <div className="header">
         //     <nav style={{ backgroundColor: theme.backgroundColor, color: theme.color}} >
@@ -54,7 +77,7 @@ export default function Navigation() {
         // </div>
 
 
-    )
+//     )
 
-}
+// }
 

@@ -14,25 +14,18 @@
   text-decoration: none;
 }
 
-.logo-img {
-  width: 70px;
-  height: auto;
-  margin: 10px;
-  border-radius: 20px;
-  background-color: #243b2a;
 
-}
 
 .menu-icon {
   margin-right: 10px;
 }
 
 .header nav {
-  background-color: #5a855a;
+  background-color: #191455;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px 0 100px;
+  padding: 0 30px 0 30px;
 }
 
 ul {
