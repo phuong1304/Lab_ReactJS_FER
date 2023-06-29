@@ -9,7 +9,7 @@ export default function Detail() {
   const film = data.find(obj => {
     return obj.id == userName.id;
   });
-  let view = film.view.toLocaleString();
+  let view = film.like.toLocaleString();
   return (
     <div className='container-detail'>
       <div className='product-card'>
@@ -20,13 +20,13 @@ export default function Detail() {
         <div className='product-details'>
           <h4 className='product-title'>{film.title}</h4>
           <div>{film.nation}</div>
-          <div className='product-price'>View: {view} people</div>
-          <div className='product-info'>{film.information}</div>
+          <div className='product-price'>likes: {film.like} people</div>
+          <div className='product-info'>{film.info}</div>
           <div className="video">
             <ReactPlayer
               width="700px"
               height="400px"
-              url={film.trailer}
+              url={film.video}
               controls
             />
           </div>
